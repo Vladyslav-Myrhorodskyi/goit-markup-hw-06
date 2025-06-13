@@ -26,14 +26,29 @@ p {
 }
 
 .container {
-
   max-width: 320px;
   width: 100%;
   padding: 96px 16px;
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* header */
+
+.burger-icon {
+  fill: "#2F2F37";
+  display: block;
+}
+.burger-btn {
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
 .page-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -41,30 +56,18 @@ p {
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav {
+  padding: 0 16px;
   display: flex;
   align-items: center;
 }
 
 .nav-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.contacts-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  display: none;
 }
 
 .header-logo {
-  padding: 24px 0;
-  margin-right: 76px;
+  display: inline-block;
+  padding: 16px 0;
 }
 
 .logo {
@@ -105,18 +108,7 @@ p {
 }
 
 .contacts {
-  font-style: normal;
-  margin-left: auto;
-}
-
-.contacts-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  display: block;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
 
 .nav-link:hover,
@@ -151,15 +143,12 @@ p {
 
 /* HERO */
 .hero-title {
-  /* font-size: 56px; */
   font-size: 36px;
-  /* line-height: 1.07; */
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
   max-width: 496px;
-  /* margin: 0 auto 48px auto; */
   margin: 0 auto 72px auto;
 }
 
@@ -183,9 +172,11 @@ p {
 }
 
 .section-hero {
-  background-image: linear-gradient(to bottom,
+  background-image: linear-gradient(
+      to bottom,
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/fon-mob-1x.jpg);
   max-width: 1440px;
   background-color: #2e2f42;
@@ -197,9 +188,11 @@ p {
 
 @media screen and (min-resolution: 2x) {
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon-mob-2x.jpg);
   }
 }
@@ -337,11 +330,6 @@ p {
   justify-content: center;
 }
 
-.team-item-icon {
-  width: 40px;
-  height: 40px;
-}
-
 .team-icon-link {
   display: flex;
   width: 40px;
@@ -364,7 +352,6 @@ p {
 }
 
 /*PORTFOLIO*/
-
 
 .portfolio-list {
   display: flex;
@@ -491,7 +478,6 @@ p {
   align-items: baseline;
 } */
 
-
 .footer-title {
   font-weight: 500;
   font-size: 16px;
@@ -509,7 +495,6 @@ p {
 
   justify-content: center;
   margin-bottom: 72px;
-
 }
 
 .footer-icon-link {
@@ -678,7 +663,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -710,7 +696,7 @@ p {
   border-color: #4d5ae5;
 }
 
-.modal-input:focus+.modal-form-icon {
+.modal-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
 
@@ -803,31 +789,155 @@ p {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked+.check-label .chek-custom {
+.modal-check:checked + .check-label .chek-custom {
   fill: #f4f4fd;
   background-color: #404bbf;
   border: none;
 }
 
+/*MOBILE_MENU*/
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none; */
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-nav {
+  margin-bottom: auto;
+}
+
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.nav-mobile-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.nav-mobile-link.current {
+  color: #404bbf;
+}
+
+.mobile-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.mobile-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
+}
+
+.mobile-list-icon {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-right: auto;
+}
 
 @media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
   .container {
     max-width: 768px;
   }
 
+  /*HEADER*/
+  .burger-btn {
+    display: none;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+
+  .contacts {
+    display: block;
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts-link {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   /* HERO */
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon-tab-1x.jpg);
   }
 
   @media screen and (min-resolution: 2x) {
     .section-hero {
-      background-image: linear-gradient(to bottom,
+      background-image: linear-gradient(
+          to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
+          rgba(46, 47, 66, 0.7)
+        ),
         url(../images/fon-tab-2x.jpg);
     }
   }
@@ -909,7 +1019,7 @@ p {
 
   .footer-email {
     width: 264px;
-    margin-bottom: 0
+    margin-bottom: 0;
   }
 }
 
@@ -919,23 +1029,49 @@ p {
     padding: 0 15px;
   }
 
+  /*HEADER*/
+  .contacts {
+    display: flex;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+  }
+
   /*HERO*/
   .hero-title {
     margin: 0 auto 48px auto;
   }
 
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon.jpg);
   }
 
   @media screen and (min-resolution: 2x) {
     .section-hero {
-      background-image: linear-gradient(to bottom,
+      background-image: linear-gradient(
+          to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
+          rgba(46, 47, 66, 0.7)
+        ),
         url(../images/fon-2x.jpg);
     }
   }
