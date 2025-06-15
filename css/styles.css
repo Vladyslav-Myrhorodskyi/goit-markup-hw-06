@@ -39,7 +39,7 @@ button {
 /* header */
 
 .burger-icon {
-  fill: "#2F2F37";
+  fill: #2F2F37;
   display: block;
 }
 
@@ -153,6 +153,7 @@ button {
   color: #fff;
   max-width: 496px;
   margin: 0 auto 72px auto;
+  max-width: 216px;
 }
 
 .hero-button {
@@ -197,7 +198,7 @@ button {
 }
 
 .section-hero .container {
-  padding: 72px 52px;
+  padding: 72px 0;
 }
 
 .hero-button:hover,
@@ -469,8 +470,10 @@ button {
 .footer-list-icon {
   display: flex;
   gap: 16px;
-
   justify-content: center;
+}
+
+.footer-div-social {
   margin-bottom: 72px;
 }
 
@@ -832,7 +835,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
 
 .mobile-contacts-link {
@@ -931,6 +934,7 @@ button {
     font-size: 56px;
     line-height: 1.07;
     margin: 0 auto 36px auto;
+    max-width: 496px;
   }
 
   /* ABOUT */
@@ -1000,6 +1004,10 @@ button {
 
   .footer-email {
     width: 264px;
+    margin-bottom: 0;
+  }
+
+  .footer-div-social {
     margin-bottom: 0;
   }
 
