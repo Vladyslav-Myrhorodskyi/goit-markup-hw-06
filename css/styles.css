@@ -219,29 +219,17 @@ button {
   overflow: hidden;
 }
 
-.section-about {
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
-}
-
 .about-list {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 24px; */
   gap: 72px;
 }
 
 .about-item {
   width: 100%;
-  /* width: calc((100% - 24px * 3) / 4); */
 }
 
 .about-title {
-  /* font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-   */
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -265,8 +253,6 @@ button {
 /* TEAM */
 .section-team {
   background-color: #f4f4fd;
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
 }
 
 .team-list {
@@ -275,7 +261,6 @@ button {
   padding-left: 12px;
   flex-wrap: wrap;
   gap: 72px;
-  /* gap: 24px; */
 }
 
 .section-team-title {
@@ -293,7 +278,6 @@ button {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background-color: #fff;
   border-radius: 0 0 4px 4px;
-  /* width: calc((100% - 24px * 3) / 4); */
 }
 
 .div-team-text {
@@ -439,7 +423,6 @@ button {
 }
 
 .footer-div {
-  /* margin-right: 120px; */
   text-align: center;
   margin-bottom: 72px;
 }
@@ -471,11 +454,6 @@ button {
   max-width: 294px;
   text-align: left;
 }
-
-/* .container-footer {
-  display: flex;
-  align-items: baseline;
-} */
 
 .footer-title {
   font-weight: 500;
@@ -616,15 +594,11 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* width: 408px; */
   width: 288px;
   min-height: 623px;
-  /* min-height: 584px; */
   border-radius: 4px;
-  /* padding: 72px 24px 24px 24px; */
   padding: 72px 16px 24px;
   transform: translate(-50%, -50%);
-
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
@@ -682,7 +656,6 @@ button {
 .modal-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  /* width: 360px; */
   width: 256px;
   height: 40px;
   background-color: transparent;
@@ -741,7 +714,6 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  /* width: 360px; */
   width: 256px;
   height: 120px;
   resize: none;
@@ -1144,8 +1116,6 @@ button {
   }
 
   .team-list {
-    display: flex;
-    flex-wrap: wrap;
     gap: 24px;
     padding: 0;
   }
