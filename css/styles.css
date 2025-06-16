@@ -145,6 +145,10 @@ button {
 }
 
 /* HERO */
+.section-hero .container {
+  padding: 96px 0px;
+}
+
 .hero-title {
   font-size: 36px;
   line-height: 1.11;
@@ -197,7 +201,7 @@ button {
   }
 }
 
-.section-hero .container {
+.section-hero {
   padding: 72px 0;
 }
 
@@ -803,6 +807,8 @@ button {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  margin-right: auto;
 }
 
 .mobile-close {
@@ -831,11 +837,14 @@ button {
   color: #404bbf;
 }
 
+.mobile-contacts {
+  margin-bottom: 48px;
+}
+
 .mobile-contacts-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-bottom: 48px;
 }
 
 .mobile-contacts-link {
@@ -854,8 +863,7 @@ button {
 .mobile-list-icon {
   display: flex;
   gap: 40px;
-  justify-content: center;
-  margin-right: auto;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
