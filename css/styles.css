@@ -28,7 +28,7 @@ p {
 .container {
   max-width: 320px;
   width: 100%;
-  padding: 96px 16px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -39,7 +39,7 @@ button {
 /* header */
 
 .burger-icon {
-  fill: #2F2F37;
+  fill: #2f2f37;
   display: block;
 }
 
@@ -146,7 +146,7 @@ button {
 
 /* HERO */
 .section-hero .container {
-  padding: 96px 0px;
+  padding: 0;
 }
 
 .hero-title {
@@ -180,9 +180,11 @@ button {
 }
 
 .section-hero {
-  background-image: linear-gradient(to bottom,
+  background-image: linear-gradient(
+      to bottom,
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/fon-mob-1x.jpg);
   max-width: 1440px;
   background-color: #2e2f42;
@@ -194,9 +196,11 @@ button {
 
 @media screen and (min-resolution: 2x) {
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon-mob-2x.jpg);
   }
 }
@@ -222,6 +226,11 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.section-about {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .about-list {
@@ -258,12 +267,16 @@ button {
 /* TEAM */
 .section-team {
   background-color: #f4f4fd;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.container-team {
+  padding: 0 28px;
 }
 
 .team-list {
   display: flex;
-  padding-right: 12px;
-  padding-left: 12px;
   flex-wrap: wrap;
   gap: 72px;
 }
@@ -340,6 +353,11 @@ button {
 }
 
 /*PORTFOLIO*/
+
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 
 .portfolio-list {
   display: flex;
@@ -424,6 +442,8 @@ button {
 /* FOOTER */
 
 .footer {
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #2e2f42;
 }
 
@@ -456,7 +476,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 294px;
+  max-width: 264px;
   text-align: left;
 }
 
@@ -679,7 +699,7 @@ button {
   border-color: #4d5ae5;
 }
 
-.modal-input:focus+.modal-form-icon {
+.modal-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
 
@@ -772,7 +792,7 @@ button {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked+.check-label .chek-custom {
+.modal-check:checked + .check-label .chek-custom {
   fill: #f4f4fd;
   background-color: #404bbf;
   border: none;
@@ -919,23 +939,25 @@ button {
 
   /* HERO */
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon-tab-1x.jpg);
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 
   @media screen and (min-resolution: 2x) {
     .section-hero {
-      background-image: linear-gradient(to bottom,
+      background-image: linear-gradient(
+          to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
+          rgba(46, 47, 66, 0.7)
+        ),
         url(../images/fon-tab-2x.jpg);
     }
-  }
-
-  .section-hero .container {
-    padding: 112px 136px;
   }
 
   .hero-title {
@@ -964,12 +986,14 @@ button {
   }
 
   /* TEAM */
+
+  .container-team {
+    padding: 0 108px;
+  }
+
   .team-list {
-    padding-right: 92px;
-    padding-left: 92px;
     display: flex;
-    row-gap: 64px;
-    column-gap: 24px;
+    gap: 64px 24px;
     flex-wrap: wrap;
   }
 
@@ -993,7 +1017,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     padding-left: 108px;
-    padding-right: 108px;
+    padding-right: 164px;
   }
 
   .footer-div {
@@ -1070,17 +1094,21 @@ button {
   }
 
   .section-hero {
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+        to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/fon.jpg);
   }
 
   @media screen and (min-resolution: 2x) {
     .section-hero {
-      background-image: linear-gradient(to bottom,
+      background-image: linear-gradient(
+          to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
+          rgba(46, 47, 66, 0.7)
+        ),
         url(../images/fon-2x.jpg);
     }
   }
